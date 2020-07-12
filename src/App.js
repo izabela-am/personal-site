@@ -55,6 +55,8 @@ export default function App() {
         <LinksContainer>
           <a
             href="https://github.com/izabela-am"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{ color: nameColor }} 
           >
             <GrGithub/>
@@ -62,6 +64,8 @@ export default function App() {
 
           <a
             href="https://www.linkedin.com/in/izabela-matos/"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{ color: nameColor }} 
           >
             <GrLinkedin/>
@@ -69,6 +73,8 @@ export default function App() {
           
           <a
             href="https://twitter.com/izabela29am"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{ color: nameColor }}   
           >
             <GrTwitter/>
