@@ -106,6 +106,8 @@ export const LinksContainer = styled.div`
 export const ToggleButton = styled.button`
   transition: transform 0.2s;
 
+  font-weight: bolder;
+  font-size: 16px;
   margin-top: 10px;
   border: none;
   border-radius: 10px;
