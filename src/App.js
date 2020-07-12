@@ -1,26 +1,77 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react';
+import { GrGithub, GrTwitter, GrLinkedin } from 'react-icons/gr'
 
-function App() {
+import GlobalStyle, { NavigationBar, ToggleButton, PageContent, LinksContainer, PageWrapper } from './styles/global';
+
+import darthVaderImg from './assets/darthvader.png';
+import r2d2Img from './assets/r2d2.png';
+import { EmpireSVG, LightSVG } from './assets/svgIcons';
+
+import ThemeContext from './ThemeProvider';
+
+export default function App() {
+  const { dark, toggleDarkMode } = useContext(ThemeContext);
+
+  const regularFontColor = dark ? `#f8f9fa` : `#222`;
+  const nameColor = dark ? `#942412` : `#86D1FD`;
+  const navbarColor = dark ? `#131313` : `#F8F9FA`;
+  const bgColor = dark ? `#222` : `#fff`;
+
+  const description = dark ?
+        'Fullstack Engineer by day, Imperial enforcer by night' :
+        'Fullstack Engineer by day, Rebel scum by night';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <PageWrapper
+      style={{
+        backgroundColor: bgColor
+      }}
+    >
 
-export default App;
+      <NavigationBar style={{ backgroundColor: navbarColor }}>
+        {dark ? <EmpireSVG/> : <LightSVG/>}
+      </NavigationBar>
+
+      <PageContent>
+        <img
+          src={dark ? darthVaderImg : r2d2Img }
+          alt={dark ? 'Darth Vader' : 'R2D2'}
+          width={150}
+        />
+
+        <p style={{ color: regularFontColor }}>
+          <b>A padawan Software Engineer discovering the ways of the code.</b>
+        </p>
+
+        <h1 style={{ color: regularFontColor }}>
+          Izabela <span style={{ color: nameColor }}>Matos</span>
+        </h1>
+
+        <p style={{ color: regularFontColor }}>
+          {description}
+        </p>
+        <br/>
+        
+        <LinksContainer>
+          <a href="https://github.com/izabela-am">
+            <GrGithub/>
+          </a>
+
+          <a href="https://www.linkedin.com/in/izabela-matos/">
+            <GrLinkedin/>
+          </a>
+          
+          <a href="https://twitter.com/izabela29am">
+            <GrTwitter/>
+          </a>
+        </LinksContainer>
+
+        <ToggleButton onClick={toggleDarkMode}>
+          Toggle
+        </ToggleButton>
+      </PageContent>
+      <GlobalStyle/>
+
+    </PageWrapper>
+  );
+};
