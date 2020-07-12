@@ -77,7 +77,10 @@ export default function App() {
 
         <ToggleButton
           onClick={toggleDarkMode}
-          style={{ backgroundColor: nameColor }} >
+          style={{
+            backgroundColor: nameColor,
+            color: navbarColor
+          }}>
           Feel the Force
         </ToggleButton>
       </PageContent>
