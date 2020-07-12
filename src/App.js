@@ -87,7 +87,7 @@ export default function App() {
             backgroundColor: nameColor,
             color: navbarColor
           }}>
-          Feel the Force
+          Power! Unlimited power!
         </ToggleButton>
       </PageContent>
       <GlobalStyle/>

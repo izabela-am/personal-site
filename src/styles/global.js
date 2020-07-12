@@ -114,5 +114,5 @@ export const ToggleButton = styled.button`
   background-color: #6c757d;
   color: white;
   height: 50px;
-  width: 200px;
+  width: 210px;
 `;
