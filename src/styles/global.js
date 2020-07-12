@@ -19,7 +19,7 @@ export default createGlobalStyle`
   }
 
   button:hover {
-    background-color: ${shade(0.2, '#6c757d')};
+    transform: translateY(2px);
     cursor: pointer;
   }
 
@@ -92,10 +92,10 @@ export const LinksContainer = styled.div`
   a {
     text-decoration: none;
     color: #6c757d;
-    transition: color 0.2s;
+    transition: transform 0.2s;
 
     &:hover {
-      color: ${shade(0.2, '#6c757d')};
+      transform: translateY(2px);
     }
   }
 
@@ -105,8 +105,7 @@ export const LinksContainer = styled.div`
 `;
 
 export const ToggleButton = styled.button`
-  transition: 0.45s ease-in-out;
-  transition: background 0.45s ease-in-out;
+  transition: transform 0.2s;
 
   margin-top: 10px;
   border: none;

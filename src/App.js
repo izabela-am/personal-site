@@ -18,8 +18,8 @@ export default function App() {
   const bgColor = dark ? `#222` : `#fff`;
 
   const description = dark ?
-        'Fullstack Engineer by day, Imperial enforcer by night' :
-        'Fullstack Engineer by day, Rebel scum by night';
+        `Fullstack Engineer by day, Imperial enforcer by night` :
+        `Fullstack Engineer by day, Rebel scum by night`;
 
   return (
     <PageWrapper
@@ -53,21 +53,32 @@ export default function App() {
         <br/>
         
         <LinksContainer>
-          <a href="https://github.com/izabela-am">
+          <a
+            href="https://github.com/izabela-am"
+            style={{ color: nameColor }} 
+          >
             <GrGithub/>
           </a>
 
-          <a href="https://www.linkedin.com/in/izabela-matos/">
+          <a
+            href="https://www.linkedin.com/in/izabela-matos/"
+            style={{ color: nameColor }} 
+          >
             <GrLinkedin/>
           </a>
           
-          <a href="https://twitter.com/izabela29am">
+          <a
+            href="https://twitter.com/izabela29am"
+            style={{ color: nameColor }}   
+          >
             <GrTwitter/>
           </a>
         </LinksContainer>
 
-        <ToggleButton onClick={toggleDarkMode}>
-          Toggle
+        <ToggleButton
+          onClick={toggleDarkMode}
+          style={{ backgroundColor: nameColor }} >
+          Feel the Force
         </ToggleButton>
       </PageContent>
       <GlobalStyle/>
