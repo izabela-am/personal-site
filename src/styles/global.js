@@ -103,16 +103,60 @@ export const LinksContainer = styled.div`
   }
 `;
 
-export const ToggleButton = styled.button`
-  transition: transform 0.2s;
-
-  font-weight: bolder;
-  font-size: 16px;
-  margin-top: 10px;
+export const ToggleButton = styled.div`
+  margin-top: 20px;
   border: none;
-  border-radius: 10px;
-  background-color: #6c757d;
-  color: white;
-  height: 50px;
-  width: 210px;
+  background-color: none;
+
+  .switch {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+  }
+
+  .switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  }
+
+  .switch--shadow + label {
+    padding: 2px;
+    width: 120px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 60px;
+  }
+
+  .switch--shadow + label:before,
+  .switch--shadow + label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: '';
+  }
+  .switch--shadow + label:before {
+    right: 1px;
+    background-color: #86D1FD;
+    border-radius: 60px;
+    transition: all 0.4s;
+  }
+  .switch--shadow + label:after {
+    width: 62px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+  }
+
+  .switch--shadow:checked + label:before {
+    background-color: #930700;
+  }
+  .switch--shadow:checked + label:after {
+    transform: translateX(60px);
+  }
 `;

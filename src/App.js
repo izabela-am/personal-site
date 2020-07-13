@@ -16,10 +16,9 @@ export default function App() {
   const nameColor = dark ? `#942412` : `#86D1FD`;
   const navbarColor = dark ? `#131313` : `#F8F9FA`;
   const bgColor = dark ? `#222` : `#fff`;
+  const svgIconTheme = dark ? <EmpireSVG/> : <LightSVG/>;
 
-  const description = dark ?
-        `Fullstack Engineer by day, Imperial enforcer by night` :
-        `Fullstack Engineer by day, Rebel scum by night`;
+  const description = dark ? `Fullstack Engineer by day, Imperial enforcer by night` : `Fullstack Engineer by day, Rebel scum by night`;
 
   return (
     <PageWrapper
@@ -29,7 +28,7 @@ export default function App() {
     >
 
       <NavigationBar style={{ backgroundColor: navbarColor }}>
-        {dark ? <EmpireSVG/> : <LightSVG/>}
+        { svgIconTheme }
       </NavigationBar>
 
       <PageContent>
@@ -81,14 +80,18 @@ export default function App() {
           </a>
         </LinksContainer>
 
-        <ToggleButton
-          onClick={toggleDarkMode}
-          style={{
-            backgroundColor: nameColor,
-            color: navbarColor
-          }}>
-          Power! Unlimited power!
+        <ToggleButton>
+          <div class="switch__container">
+            <input
+              onClick={toggleDarkMode}
+              id="switch-shadow"
+              class="switch switch--shadow"
+              type="checkbox"
+            />
+            <label for="switch-shadow"/>
+          </div>
         </ToggleButton>
+        
       </PageContent>
       <GlobalStyle/>
 
