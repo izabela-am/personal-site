@@ -53,7 +53,7 @@ export default function App() {
         
         <LinksContainer>
           <a
-            href="https://github.com/izabela-am"
+            href="https://twitter.com/iza0x01"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: nameColor }} 
