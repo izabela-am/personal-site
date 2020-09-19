@@ -18,7 +18,7 @@ export default function App() {
   const bgColor = dark ? `#222` : `#fff`;
   const svgIconTheme = dark ? <EmpireSVG/> : <LightSVG/>;
 
-  const description = dark ? `Fullstack Engineer by day, Imperial enforcer by night` : `Fullstack Engineer by day, Rebel scum by night`;
+  const description = dark ? `Backend Engineer by day, Imperial enforcer by night` : `Fullstack Engineer by day, Rebel scum by night`;
 
   return (
     <PageWrapper
@@ -53,7 +53,7 @@ export default function App() {
         
         <LinksContainer>
           <a
-            href="https://twitter.com/iza0x01"
+            href="https://github.com/izabela-am"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: nameColor }} 
@@ -71,7 +71,7 @@ export default function App() {
           </a>
           
           <a
-            href="https://twitter.com/izabela29am"
+            href="https://twitter.com/iza0x01"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: nameColor }}   
