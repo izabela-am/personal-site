@@ -18,7 +18,7 @@ export default function App() {
   const bgColor = dark ? `#222` : `#fff`;
   const svgIconTheme = dark ? <EmpireSVG/> : <LightSVG/>;
 
-  const description = dark ? `Backend Engineer by day, Imperial enforcer by night` : `Fullstack Engineer by day, Rebel scum by night`;
+  const description = dark ? `Backend Engineer by day, Imperial enforcer by night` : `Backend Engineer by day, Rebel scum by night`;
 
   return (
     <PageWrapper
