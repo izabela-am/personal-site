@@ -71,7 +71,7 @@ export default function App() {
           </a>
           
           <a
-            href="https://twitter.com/iza0x01"
+            href="https://twitter.com/iza0x1d"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: nameColor }}   
